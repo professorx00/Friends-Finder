@@ -26,13 +26,21 @@ app.post('/addFriend',function(req,res){
     let answers = req.body;
     let name=answers.name;
     let photo=answers.photo;
-    let question=JSON.stringify(answers.questions)
-    console.log(question)
-    database.query("INSERT INTO `surveys` (`name`,`photo`,`answers`) VALUES (?,?,?)",[name,photo,question],function(err,results){
-        if(err) throw err;
-        res.send(true)
-    })
+    let question=answers.questions
+    let arrayAnswers =answers.questions.split(",")
     
+    database.query("select filekey,answers from surveys",function(err,results){
+        if(err) throw err;
+        for(let x = 0;x<res.length;x++){
+            let ans = results[x].answers.split(",");
+        };
+        console.log("successful")
+        res.sendStatus(201)
+    })
+    // database.query("INSERT INTO `surveys` (`name`,`photo`,`answers`) VALUES (?,?,?)",[name,photo,question],function(err,results){
+    //     if(err) throw err;
+    //     res.send(true)
+    // })
 });
 
 app.listen(PORT, function () {

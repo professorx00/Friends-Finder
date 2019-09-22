@@ -12,31 +12,31 @@ const questionEight = $("#questionEight");
 const questionNine = $("#questionNine");
 const questionTen = $("#questionTen");
 const btn = $("#formSubmit");
-
-function combineAnswers(){
+let allquestions =[]
+function combineAnswers(answers){
     return {
         "name":name.val().trim(),
         "photo":photo.val().trim(),
-        "questions":{
-            "one":questionOne.val(),
-            "two":questionTwo.val(),
-            "three":questionThree.val(),
-            "four":questionFour.val(),
-            "five":questionFive.val(),
-            "six":questionSix.val(),
-            "seven":questionSeven.val(),
-            "eight":questionEight.val(),
-            "nine":questionNine.val(),
-            "ten":questionTen.val()
-        }
+        "questions":answers.trim()
     }
     
 };
 function addFriend(answers){
-    $.post('/addFriend',answers,function(err){if(err) throw err});
+    $.post('/addFriend',answers,function(err,res){
+        if(err) throw err;
+        console.log(res)
+    });
 }
+// function getFriend(){
+//     $.get('/getFriend',function(err,res){
+//         if(err) throw err;
+//         console.log(res.body);
+//     })
+// }
 
 btn.on("click", function(event){
     event.preventDefault()
-    addFriend(combineAnswers());
+    allquestions = `${questionOne.val()},${questionTwo.val()},${questionThree.val()},${questionFour.val()},${questionFive.val()},${questionSix.val()},${questionSeven.val()},${questionEight.val()},${questionNine.val()},${questionTen.val()}`
+    let test=combineAnswers(allquestions)
+    addFriend(test)
 })
