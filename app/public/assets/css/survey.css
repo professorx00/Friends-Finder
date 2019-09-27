@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Freckle+Face&display=swap');
+
+.error{
+    color:red;
+    font-size: 3rem;
+}
+#formContainer{
+    padding: 3rem;
+    margin-top:0;
+}
+#headerImg{
+    max-width:50%;
+    margin:0px;
+    padding:0;
+    vertical-align: bottom;
+}
+#photoImg{
+    max-height:200px;
+}
+#titleCol{
+    margin: 0;
+}
+#title, #titleCol{
+    margin: 0;
+    font-family: 'Baloo Bhaijaan', cursive;
+    text-shadow: #76ff03 2px 2px;
+    text-shadow: #59be06 4px 4px;
+}
+#header{
+    padding:0;
+    margin-bottom:0;
+}
+#headRow{
+    margin-bottom:0;
+    margin-top: 1rem;
+}
+#headImgCol{
+    margin-bottom: 0;
+    padding:0;
+    display:flex;
+    vertical-align: bottom;
+    align-content: right;
+}
+.btn{
+    background-color: #76ff03;
+}
+
+.greenText {
+    color: black;
+    font-size:2rem;
+    font-family: 'Freckle Face', cursive;
+}

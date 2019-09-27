@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/materialize.css" media="screen,projection" />
+    <link rel="stylesheet" href="./assets/css/survey.css">
+</head>
+
+<body class="black">
+        <div id="modal1" class="modal">
+                <div class="modal-content" id="modalContent">
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat green-text">Close</a>
+                </div>
+        </div>
+
+
+
+
+
+    <div class="container white-text" id="header">
+        <div class="row" id="headRow">
+            <div class="col m6 m8 l8" id="titleCol">
+                <h1 class="" id="title">Wubba Lubba Dub Dub Survey</h1>
+            </div>
+            <div class="col m6 m4 l4" id="headImgCol">
+                <img src="assets/images/Rick_and_Morty.png" id="headerImg">
+            </div>
+        </div>    
+    </div>
+    <div class="container white" id="formContainer">
+        <div id="error"></div>
+        <form id="surveyForm">
+            <div class="input-field col s12">
+                <input placeholder="Enter Your Name Here" id="name" type="text" class="validate" required>
+                <label for="name">Name</label>
+            </div>
+            <div class="input-field col s12">
+                <input placeholder="Enter the URL for your photo" id="photo" type="text" class="validate" required>
+                <label for="photo">Photo Link</label>
+            </div>
+            <div class="input-field col s12">
+                <select id="qOne" class="selections" required>
+                    <option value="100" selected>Your mind is always buzzing with unexplored ideas and plans. </option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <label>Question 1:</label>
+            </div>
+            <div class="input-field col s12">
+                <select id="qTwo" class="selections" required>
+                    <option value="100" selected >Generally speaking, you rely more on your experience than your imagination.</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <label>Question 2:</label>
+            </div>
+            <div class="input-field col s12">
+                <select id="qThree" class="selections" required>
+                    <option value="100"  selected>You find it easy to stay relaxed and focused even when there is some pressure.
+                    </option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <label>Question 3:</label>
+            </div>
+            <div class="input-field col s12">
+                <select id="qFour" class="selections"  required>
+                    <option value="100"  selected>You rarely do something just out of sheer curiosity.
+                    </option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <label>Question 4:</label>
+            </div>
+            <div class="input-field col s12">
+                <select id="qFive"  class="selections" required>
+                    <option value="100"  selected>People can rarely upset you.
+                    </option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <label>Question 5:</label>
+            </div>
+            <div class="input-field col s12">
+                <select id="qSix"  class="selections" required>
+                    <option value="100" selected>It is often difficult for you to relate to other people’s feelings.</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <label>Question 6:</label>
+            </div>
+            <div class="input-field col s12">
+                <select id="qSeven"  class="selections" required>
+                    <option value="100" selected>In a discussion, truth should be more important than people’s sensitivities.</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <label>Question 7:</label>
+            </div>
+            <div class="input-field col s12" class="green-text">
+                <select id="qEight" class="selections"  required>
+                    <option value="100" selected >You rarely get carried away by fantasies and ideas.</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <label>Question 8:</label>
+            </div>
+            <div class="input-field col s12">
+                <select id="qNine" class="selections"  required>
+                    <option value="100" selected>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <label>Question 9:</label>
+            </div>
+            <div class="input-field col s12">
+                <select id="qTen" class="selections"  required>
+                    <option value="100" selected>You feel more energetic after spending time with a group of people.</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <label>Question 10:</label>
+            </div>
+            <button class="btn waves-effect waves-light greenText" type="submit" name="action" id="formSubmit">Submit
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="./assets/scripts/materialize.js"></script>
+    <script src="assets/scripts/survey.js"></script>
+</body>
+
+</html>
